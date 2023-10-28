@@ -13,23 +13,20 @@ header {
     align-items: center;
     background-color: #4c7ef3;
     color: #ffffff;
+  }
 
-
+  h1 {
+  flex: 1;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.43rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
 }
-
-h1 {
-    flex: 1;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.43rem;
-    font-weight: 900;
-    letter-spacing: 0.3px;
-}
-
-.time {
+  .time {
     padding-right: 4.29rem;
     font-size: 1.28rem;
     font-weight: bold;
-}
+  }
 
 /* Form Elements */
 

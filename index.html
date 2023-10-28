@@ -4,15 +4,16 @@
     <title>Ticket</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-    <script src="" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./app.js" defer></script>
 </head>
 <body>
     <div id="app">
         <header>
-            <h1>TICKET</h1>
+            <h1> TICKET</h1>
         </header>
-        <form>
+        <form v-on:reset="resetFields" v-on:submit.prevent="submitForm">
             <div class="form-row">
                 <div class="form-field">
                     <label for="first-name"> First Name</label>
@@ -87,7 +88,7 @@
                                                 </div>
                                                 <div>
                                                     <button type="reset"  class="reset">Reset</button>
-                                                    <button type="submit" >ConfirmTicket</button>                                             </div>
+                                                    <button type="submit" v-bind:disabled="!formIsValid">ConfirmTicket</button>                                             </div>
         </form>
     </div>
     
